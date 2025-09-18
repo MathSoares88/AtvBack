@@ -6,31 +6,22 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitConfig {
-    public static final String QUEUE_NAME = "pedidos-queue";
-    public static final String EXCHANGE_NAME = "pedidos-exchange";
-    public static final String ROUTING_KEY = "pedidos.novo";
+    
+    public static final String QUEUE_NAME = "mensagens";
+    public static final String EXCHANGE_NAME = "mensagens.exchange";
 
     @Bean
-    public Queue pedidosQueue() {
-        return QueueBuilder.durable(QUEUE_NAME).build();
+    public Queue queue() {
+        return new Queue(QUEUE_NAME, true);
     }
 
     @Bean
-    public DirectExchange pedidosExchange() {
-        return new DirectExchange(EXCHANGE_NAME);
+    public FanoutExchange exchange() {
+        return new FanoutExchange(EXCHANGE_NAME);
     }
 
     @Bean
-    public Binding binding(Queue pedidosQueue, DirectExchange pedidosExchange) {
-        return BindingBuilder.bind(pedidosQueue).to(pedidosExchange).with(ROUTING_KEY);
+    public Binding binding() {
+        return BindingBuilder.bind(queue()).to(exchange());
     }
 }
-
-
-
-
-
-
-
-
-
