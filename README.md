@@ -1,4 +1,4 @@
-Atv-Sprint2
+**Atv-Sprint2**
 
 Projeto feito para treinar comunicação entre aplicações usando RabbitMQ
 De um lado temos o Spring Boot (Java) como produtor
@@ -6,7 +6,7 @@ Do outro, o Node.js como consumidor
 
 A ideia é: o produtor manda mensagens e o consumidor recebe, guarda e mostra pra gente
 
-Como funciona
+**Como funciona**
 
 Produtor (Spring Boot / Java)
 
@@ -29,7 +29,7 @@ RabbitMQ
 Sobe via Docker Compose.
 
 
-▶️ Como rodar
+**▶️ Como rodar**
 1. Subir o RabbitMQ
 docker compose up -d
 
