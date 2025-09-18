@@ -55,6 +55,10 @@ Content-Type: application/json
 
 http://localhost:3000/mensagens
 
+<img width="1281" height="841" alt="image" src="https://github.com/user-attachments/assets/ef4e07e5-7d36-4c6d-a4dc-bfab71ea84d9" />
+
+<img width="584" height="365" alt="image" src="https://github.com/user-attachments/assets/f9dfc921-c660-454e-b972-0c4401a57fe3" />
+
 
 
 👩‍💻 Autores
